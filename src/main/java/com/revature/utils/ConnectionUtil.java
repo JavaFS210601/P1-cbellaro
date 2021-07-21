@@ -6,13 +6,12 @@ import java.sql.SQLException;
 
 public class ConnectionUtil {
 
-	public static void main(String[] args) {
-			
-			try(Connection conn = ConnectionUtil.getConnection()) {
-				System.out.println("Connection established w/ DB");
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+	public static void main(String[] args) {		
+		try(Connection conn = ConnectionUtil.getConnection()) {
+			System.out.println("Connection established w/ DB");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public static Connection getConnection() throws SQLException {
@@ -23,7 +22,7 @@ public class ConnectionUtil {
 			e.printStackTrace();
 		}
 		
-		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=P1";
+		String url = "jdbc:postgresql://localhost:5432/postgres?currentSchema=\"P1\"";
 		String username = "postgres";
 		String password = "password";
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Reimbursement System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="p-3 mb-2 bg-secondary">
+    <header>
+        <div class="alert alert-dark text-right">
+            <button type="button" class="btn btn-dark pull-right" id="logoutBtn">Logout</button>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="font-weight-bold text-center" id="submitText">Submit a new reimbursement request here:</h3>
+        <p class="text-center text-white" id="typeIds">Type IDs: 1. Hotel | 2. Travel | 3. Food | 4. Other</p>
+        <div>
+            <div class="form-row align-items-center justify-content-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Type ID:</label>
+                    <input type="number" min=1 max=4 class="form-control mb-2" id="typeID" placeholder="Type ID">
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Amount</label>
+                    <input type="text" class="form-control mb-2" id="amnt" placeholder="Amount">
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Description</label>
+                    <input type="text" class="form-control mb-2" id="desc" placeholder="Description">
+                </div>
+                <div col-auto>
+                    <button type="submit" class="btn btn-dark" id="submitBtn">Submit</button>
+                </div>
+            </div>    
+        </div>
+        <br>
+        <br>
+        <h3 class="font-weight-bold">Pending Reimbursements</h3>
+        <table class="table table-dark" id="pendingTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date Submitted</th>
+                    <th>Author</th>
+                    <th>Resolved By</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="pendingTableBody"></tbody>
+        </table>
+        <br>
+        <br>
+        <h3 class="font-weight-bold">Past Reimbursements</h3>
+        <table class="table table-dark" id="pastTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Date Submitted</th>
+                    <th>Author</th>
+                    <th>Resolved By</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="pastTableBody"></tbody>
+        </table>
+    </div>
+    <script src="user.js"></script>
+    </body>
+</html>

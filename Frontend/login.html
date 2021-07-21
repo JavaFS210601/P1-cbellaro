@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Reimbursement System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="p-3 mb-2 bg-secondary"></body>
+    <header>
+        <div class="alert alert-dark text-center">
+            <h3>Welcome to Company & Co's Employee Reimbursement System</h3>
+        </div>
+    </header>
+    <div class="container" id="fullcontainer">
+        <br>
+        <div>
+            <h4 class="text-white text-center">Please enter your login credentials</h4>
+            <br>
+            <div class="form-row align-items-center justify-content-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Type ID:</label>
+                    <input type="text" class="form-control mb-2" id="username" placeholder="username">
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Amount</label>
+                    <input type="password" class="form-control mb-2" id="password" placeholder="password">
+                </div>
+                <button id="loginButton" class="btn btn-dark">Login</button>
+            </div>    
+        </div>
+    </div>
+    <p id="failedLogin" class="text-danger text-center"></p>
+    <script src="login.js"></script>
+</body>
+</html>

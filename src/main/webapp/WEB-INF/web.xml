@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>P1-cbellaro</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>P1</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -9,4 +9,30 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- Declaring servlets -->
+  
+  <servlet>
+  	<display-name>MasterServlet</display-name>
+  	<servlet-name>MasterServlet</servlet-name>
+  	<servlet-class>com.revature.web.MasterServlet</servlet-class>
+  </servlet>
+  
+  <!-- Mapping servlets -->
+  
+  <servlet-mapping>
+  	<servlet-name>MasterServlet</servlet-name>
+  	<url-pattern>/*</url-pattern> <!-- We want every request that comes into tomcat to hit the MasterServlet -->					  <!-- We can map a servlet to every possible request with the * (like a wildcard) -->
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>CorsFilter</filter-name>
+  	<filter-class>com.revature.web.CorsFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>CorsFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
 </web-app>
